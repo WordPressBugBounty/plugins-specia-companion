@@ -4,7 +4,7 @@ Tags: homepage, companion, demo, sections, customizer, widget, settings
 Requires at least: 4.6 or higher
 Tested up to: 6.6
 Requires PHP: 5.6
-Stable tag: 4.2.29
+Stable tag: 4.2.30
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -50,7 +50,7 @@ You can check out our themes demo <a href="https://speciatheme.com/themes/" rel=
 - [Specia](https://wordpress.org/themes/specia/)			- [Free Demo](https://demo.speciatheme.com/lite/specia/)
 - [Spera](https://wordpress.org/themes/spera/)				- [Free Demo](https://demo.speciatheme.com/lite/spera/)
 - [Spyropress](https://wordpress.org/themes/spyropress/)	- [Free Demo](https://demo.speciatheme.com/lite/spyropress/)
-- [Webstrap](https://wordpress.org/themes/webstrap/)
+- [Webstrap](https://wordpress.org/themes/webstrap/)		- [Free Demo](https://demo.speciatheme.com/lite/webstrap/)
 - [Envitech](https://wordpress.org/themes/envitech/)
 - [Ferio](https://wordpress.org/themes/ferio/)
 - [Fortify](https://wordpress.org/themes/fortify/)
@@ -84,6 +84,9 @@ Specia Companion WordPress plugin is licensed under the GPL3 (https://www.gnu.or
 
 
 == Changelog ==
+
+= 4.2.30 =
+* Readme Updated
 
 = 4.2.29 =
 * Readme Updated
