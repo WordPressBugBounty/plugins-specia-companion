@@ -2,9 +2,9 @@
 Contributors: specia
 Tags: homepage, companion, demo, sections, customizer, widget, settings
 Requires at least: 4.6 or higher
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 5.6
-Stable tag: 4.2.33
+Stable tag: 4.2.35
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -79,11 +79,17 @@ Yes, This plugin is specially make for Specia Themes . You can install theme for
 
 == License ==
 
-Specia Companion WordPress plugin, Copyright (C) 2024 Specia Theme
+Specia Companion WordPress plugin, Copyright (C) 2025 Specia Theme
 Specia Companion WordPress plugin is licensed under the GPL3 (https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 
 == Changelog ==
+
+= 4.2.35 =
+* Readme Updated
+
+= 4.2.34 =
+* Tested WP 6.7 Compatibility
 
 = 4.2.33 =
 * Readme Updated
