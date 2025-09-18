@@ -1,7 +1,11 @@
 <?php
 $theme = wp_get_theme(); // gets the current theme
 $file = SPECIA_COMPANION_PLUGIN_URL .'inc/specia/images/logo/'.$theme->name.'.png';
-$ImagePath = SPECIA_COMPANION_PLUGIN_URL .'inc/specia/images';
+if($theme->name == 'Zestoria' ) {
+	$ImagePath = SPECIA_COMPANION_PLUGIN_URL .'inc/zestoria/images';
+}else{
+	$ImagePath = SPECIA_COMPANION_PLUGIN_URL .'inc/specia/images';
+}
 
 $images = array(
 $file,
