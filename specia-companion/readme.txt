@@ -4,7 +4,7 @@ Tags: homepage, companion, demo, sections, customizer
 Requires at least: 4.6 or higher
 Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 5.3
+Stable tag: 5.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -27,6 +27,7 @@ Specia Companion is created for <a href="https://speciatheme.com/" rel="nofollow
 You can check out our themes demo <a href="https://speciatheme.com/themes/" rel="nofollow" target="_blank">Click Here</a> for a more detailed overview of the features.
 
 **Compatible Themes:**
+- [Zestoria](https://wordpress.org/themes/zestoria/)  		- [Free Demo](https://demo.speciatheme.com/lite/zestoria)
 - [Anamio](https://wordpress.org/themes/anamio/)  			- [Free Demo](https://demo.speciatheme.com/lite/anamio)
 - [Appointable](https://wordpress.org/themes/appointable/)  - [Free Demo](https://demo.speciatheme.com/lite/appointable)
 - [Arkbiz](https://wordpress.org/themes/arkbiz/)  			- [Free Demo](https://demo.speciatheme.com/lite/arkbiz/)
@@ -86,6 +87,9 @@ Specia Companion WordPress plugin is licensed under the GPL3 (https://www.gnu.or
 
 
 == Changelog ==
+
+= 5.4 =
+* Readme Updated
 
 = 5.3 =
 * New Theme Added
