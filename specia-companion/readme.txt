@@ -2,9 +2,9 @@
 Contributors: specia
 Tags: homepage, companion, demo, sections, customizer
 Requires at least: 4.6 or higher
-Tested up to: 6.8
-Requires PHP: 5.6
-Stable tag: 5.5
+Tested up to: 6.9
+Requires PHP: 5.8
+Stable tag: 6.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -27,6 +27,9 @@ Specia Companion is created for <a href="https://speciatheme.com/" rel="nofollow
 You can check out our themes demo <a href="https://speciatheme.com/themes/" rel="nofollow" target="_blank">Click Here</a> for a more detailed overview of the features.
 
 **Compatible Themes:**
+- [Centrum](https://wordpress.org/themes/centrum/)  		- [Free Demo](https://demo.speciatheme.com/lite/centrum/)
+- [Contry](https://wordpress.org/themes/contry/)  			- [Free Demo](https://demo.speciatheme.com/lite/contry)
+- [Anavo](https://wordpress.org/themes/anavo/)  			- [Free Demo](https://demo.speciatheme.com/lite/anavo)
 - [Zestoria](https://wordpress.org/themes/zestoria/)  		- [Free Demo](https://demo.speciatheme.com/lite/zestoria)
 - [Anamio](https://wordpress.org/themes/anamio/)  			- [Free Demo](https://demo.speciatheme.com/lite/anamio)
 - [Appointable](https://wordpress.org/themes/appointable/)  - [Free Demo](https://demo.speciatheme.com/lite/appointable)
@@ -82,11 +85,29 @@ Yes, This plugin is specially make for Specia Themes . You can install theme for
 
 == License ==
 
-Specia Companion WordPress plugin, Copyright (C) 2025 Specia Theme
+Specia Companion WordPress plugin, Copyright (C) 2026 Specia Theme
 Specia Companion WordPress plugin is licensed under the GPL3 (https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 
 == Changelog ==
+
+= 6.1 =
+* Readme Updated
+
+= 6.0 =
+* Version Increased
+
+= 5.9 =
+* Tested WP 6.9 Compatibility
+
+= 5.8 =
+* Readme Updated
+
+= 5.7 =
+* New Theme Added
+
+= 5.6 =
+* Readme Updated
 
 = 5.5 =
 * New Theme Added

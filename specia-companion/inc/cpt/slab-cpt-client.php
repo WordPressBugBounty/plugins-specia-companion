@@ -53,6 +53,9 @@
 		{
 			global $post;
 			
+			//Add NONCE FIELD			
+			wp_nonce_field('special_client_nonce_action', 'special_client_nonce');
+			
 			$client_icon_class = sanitize_text_field( get_post_meta( get_the_ID(),'client_icon_class', true ));
 		?>
 			
@@ -67,17 +70,26 @@
 
 
 		function specia_meta_client_save($post_id) 
-		{
-			if(isset( $_POST['post_ID']))
-			{ 	
-				$post_ID = $_POST['post_ID'];				
-				$post_type=get_post_type($post_ID);
-				if($post_type=='specia_client')
-				{	
+		{	
+			if (!isset($_POST['special_client_nonce'])) {
+				return;
+			}
+
+			if (!wp_verify_nonce(sanitize_key($_POST['special_client_nonce']), 'special_client_nonce_action')) {
+				return;
+			}
+
+			if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+				return;
+			}
+
+			if (!current_user_can('edit_post', $post_id)) {
+				return;
+			}
 			
-					update_post_meta($post_ID, 'client_icon_class', sanitize_text_field($_POST['client_icon_class']));
-				
-				}
+			if (isset($_POST['client_icon_class'])) {
+				$client_icon_class_sani_unslash = sanitize_text_field(wp_unslash($_POST['client_icon_class']));
+				update_post_meta($post_id, 'client_icon_class', $client_icon_class_sani_unslash);
 			}
 		}
 ?>

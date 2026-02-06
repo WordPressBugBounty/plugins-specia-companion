@@ -2,19 +2,21 @@
 /*
 Plugin Name: Specia Companion
 Description: Specia Companion is created for Specia Theme. The plugin set frontpage sections, It allow edit customizer settings for the theme. Extend your theme functionalities with one click import & enjoy free stock images. Try to install Specia Companion, 26+ theme Supported with this Plugin.
-Version: 5.5
+Version: 6.1
 Author: specia
 Author URI: https://speciatheme.com
 Text Domain: specia-companion
-Requires PHP: 5.6
+Requires PHP: 5.8
 Requires: 4.6 or higher
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 */
 
 if ( 'specia' !== get_template() ) {
 	return;
 }
 
-define('SPECIA_COMPANION_VER', '4.2.33');
+define('SPECIA_COMPANION_VER', '5.9');
 define( 'SPECIA_COMPANION_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'SPECIA_COMPANION_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
@@ -61,7 +63,7 @@ if ( file_exists(get_stylesheet_directory() . '/sections/specia-client.php') ) {
 		
 		
 		public function specia_companion_enqueue_scripts() {
-			wp_enqueue_style('specia-companion-admin',SPECIA_COMPANION_PLUGIN_URL .'assets/css/admin.css');
+			wp_enqueue_style('specia-companion-admin',SPECIA_COMPANION_PLUGIN_URL .'assets/css/admin.css',array(),'5.9');
 			wp_enqueue_script( 'jquery-ui-core' );
 					wp_enqueue_script( 'jquery-ui-dialog' );
 					wp_enqueue_style( 'wp-jquery-ui-dialog' );	
@@ -89,7 +91,7 @@ if ( file_exists(get_stylesheet_directory() . '/sections/specia-client.php') ) {
 
 		 function specia_companion_page_init(){
 		echo "<h2>Specia Companion Compatible Themes</h2>";
-		$api_url = 'https://api.wordpress.org/themes/info/1.1/?action=query_themes&request[author]=specia&request[per_page]=22';
+		$api_url = 'https://api.wordpress.org/themes/info/1.1/?action=query_themes&request[author]=specia&request[per_page]=100';
 
 		// Read JSON file
 		$json_data = file_get_contents($api_url);
@@ -141,7 +143,8 @@ if ( file_exists(get_stylesheet_directory() . '/sections/specia-client.php') ) {
 											$specia_btn_value= 'Install & Activate Now';
 										endif;
 										$theme_status = 'specia-companion-theme-' . $get_theme_staus;
-										echo sprintf( __( '<a href="#" class="%3$s xl-btn-active specia-companion-btn-outline xl-install-action specia-companion-btn" data-theme-slug="%1$s">%4$s</a>', 'specia-companion' ), esc_html($themes->name),esc_url( admin_url( 'themes.php?theme=%1$s' ) ), $theme_status, $specia_btn_value );
+										/* Translators: 1: Theme Name 3:Theme Status 4: Button Value */
+										echo wp_kses_post(sprintf( __( '<a href="#" class="%3$s xl-btn-active specia-companion-btn-outline xl-install-action specia-companion-btn" data-theme-slug="%1$s">%4$s</a>', 'specia-companion' ), esc_html($themes->name),esc_url( admin_url( 'themes.php?theme=%1$s' ) ), $theme_status, $specia_btn_value ));
 										//switch_theme( $themes->name );
 										?>
 									</div>
@@ -168,18 +171,22 @@ if ( file_exists(get_stylesheet_directory() . '/sections/specia-client.php') ) {
 		 * @since 1.0
 		 * @return void
 		 */
-		function activate_theme() { 
-			 $specia_current_theme =  strtolower($_POST['specia_current_theme']);
-			switch_theme(  $specia_current_theme );
-			wp_send_json_success(
-				array(
-					'success' => true,
-					'message' => __( 'Theme Successfully Activated', 'specia-companion' ),
-				)
-			);
-			wp_die(); 
-		}
+		function activate_theme() {
 		
+			check_ajax_referer( 'my-special-string', 'security' );
+			if( isset($_POST['specia_current_theme']) ) {
+				$this_theme = sanitize_text_field(wp_unslash($_POST['specia_current_theme']));
+				$specia_current_theme =  strtolower($this_theme);
+				switch_theme(  $specia_current_theme );
+				wp_send_json_success(
+					array(
+						'success' => true,
+						'message' => __( 'Theme Successfully Activated', 'specia-companion' ),
+					)
+				);
+				wp_die(); 
+				}
+		}		
 
 	}
 }// End if().
@@ -192,8 +199,8 @@ Specia_Companion_Setup::get_instance();
 /**
  * The code during plugin activation.
  */
-function activate_speciacompanion() {
+function speciacompanion_activate() {
 	require_once plugin_dir_path( __FILE__ ) . 'inc/specia-companion-activator.php';
 	Specia_Companion_Activator::activate();
 }
-register_activation_hook( __FILE__, 'activate_speciacompanion' );
+register_activation_hook( __FILE__, 'speciacompanion_activate' );

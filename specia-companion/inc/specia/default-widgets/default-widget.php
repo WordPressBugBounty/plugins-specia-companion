@@ -1,5 +1,5 @@
 <?php
-$activate = array(
+$specia_activate = array(
         'sidebar-primary' => array(
             'search-1',
             'recent-posts-1',
@@ -52,7 +52,7 @@ $activate = array(
 			9 => array('features_widget_title' => 'Training & Support','features_widget_icon' => 'fa-life-ring','features_widget_description' => 'Pellentesque molestie laoreet ipsum eu laoreet.')
 			));	
 		
-    update_option('sidebars_widgets',  $activate);
-	$MediaId = get_option('specia_media_id');
-	set_theme_mod( 'custom_logo', $MediaId[0] );
+    update_option('sidebars_widgets',  $specia_activate);
+	$specia_MediaId = get_option('specia_media_id');
+	set_theme_mod( 'custom_logo', $specia_MediaId[0] );
 ?>

@@ -4,25 +4,28 @@
 		  'comment_status' => 'closed',
 		  'ping_status' =>  'closed' ,
 		  'post_author' => 1,
-		  'post_date' => date('Y-m-d H:i:s'),
+		  'post_date' => gmdate('Y-m-d H:i:s'),
 		  'post_name' => 'Home',
 		  'post_status' => 'publish' ,
 		  'post_title' => 'Home',
 		  'post_type' => 'page',
 	);  
 	//insert page and save the id
-	$newvalue = wp_insert_post( $post, false );
-	if ( $newvalue && ! is_wp_error( $newvalue ) ){
-		update_post_meta( $newvalue, '_wp_page_template', 'templates/template-homepage-one.php' );
+	$specia_newvalue = wp_insert_post( $post, false );
+	if ( $specia_newvalue && ! is_wp_error( $specia_newvalue ) ){
+		update_post_meta( $specia_newvalue, '_wp_page_template', 'templates/template-homepage-one.php' );
 		
 		// Use a static front page
-		$array_of_objects = get_posts([
+		$specia_array_of_objects = get_posts([
 			'title' => 'Home',
 			'post_type' => 'any',
 		]);
-		$page = $array_of_objects[0];//Be sure you have an array with single post or page
+		$page = $specia_array_of_objects[0];//Be sure you have an array with single post or page
 		update_option( 'show_on_front', 'page' );
 		update_option( 'page_on_front', $page->ID );
 		
 	}
+	
+	set_theme_mod('call_action_highlight_content','Years of Experience');
+	set_theme_mod('call_action_highlight_ttl','12+');
 ?>
