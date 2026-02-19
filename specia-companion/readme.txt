@@ -4,7 +4,7 @@ Tags: homepage, companion, demo, sections, customizer
 Requires at least: 4.6 or higher
 Tested up to: 6.9
 Requires PHP: 5.8
-Stable tag: 6.1
+Stable tag: 6.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -12,7 +12,7 @@ Specia Companion is created for Specia Theme
 
 == Description ==
 
-Specia Companion is created for <a href="https://speciatheme.com/" rel="nofollow">Specia Theme</a>. The plugin set frontpage sections, It allow edit customizer settings for the theme. Extend your theme functionalities with one click import & enjoy free stock images. Build your website with Specia. 29 theme Supported with this Plugin. Checkout Our All Themes Here. <a href="https://speciatheme.com/themes/" rel="nofollow">Explore Themes</a>
+Specia Companion is created for <a href="https://speciatheme.com/" rel="nofollow">Specia Theme</a>. The plugin set frontpage sections, It allow edit customizer settings for the theme. Extend your theme functionalities with one click import & enjoy free stock images. Build your website with Specia. 30+ theme Supported with this Plugin. Checkout Our All Themes Here. <a href="https://speciatheme.com/themes/" rel="nofollow">Explore Themes</a>
 
 **Features:**
 &#9989; Setup Header Section
@@ -90,6 +90,9 @@ Specia Companion WordPress plugin is licensed under the GPL3 (https://www.gnu.or
 
 
 == Changelog ==
+
+= 6.2 =
+* Readme Updated
 
 = 6.1 =
 * Readme Updated
