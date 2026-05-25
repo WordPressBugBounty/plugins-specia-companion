@@ -2,11 +2,11 @@
 /*
 Plugin Name: Specia Companion
 Description: Specia Companion is created for Specia Theme. The plugin set frontpage sections, It allow edit customizer settings for the theme. Extend your theme functionalities with one click import & enjoy free stock images. Try to install Specia Companion, 26+ theme Supported with this Plugin.
-Version: 6.3
+Version: 6.4
 Author: specia
 Author URI: https://speciatheme.com
 Text Domain: specia-companion
-Requires PHP: 5.8
+Requires PHP: 7.4
 Requires: 4.6 or higher
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
