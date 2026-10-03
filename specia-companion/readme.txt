@@ -2,9 +2,9 @@
 Contributors: specia
 Tags: homepage, companion, demo, sections, customizer
 Requires at least: 4.6 or higher
-Tested up to: 7.0
+Tested up to: 7.1.2
 Requires PHP: 7.4
-Stable tag: 6.4
+Stable tag: 6.5
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -90,6 +90,9 @@ Specia Companion WordPress plugin is licensed under the GPL3 (https://www.gnu.or
 
 
 == Changelog ==
+
+= 6.5 =
+* Tested WP 7.1.2 Compatibility
 
 = 6.4 =
 * Tested WP 7.0 Compatibility
